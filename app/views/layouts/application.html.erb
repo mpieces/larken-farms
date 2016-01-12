@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Larken</title>
+  <title>Larken Farms</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
+  <div id="banner">
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "Larken Farms" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Peaches</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Ordering</a></li>
+        <li><a href="#">Location</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Log In</a></li>
+      </ul>
+    </div>
+    <div id="main">
 
-<%= yield %>
+          <%= yield %>
+
+    </div>
 
 </body>
 </html>
