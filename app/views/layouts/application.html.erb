@@ -13,8 +13,11 @@
   </div>
   <div id="columns">
     <div id="side">
+      <div id="cart">
+        <%= render @cart %>
+      </div>
+
       <ul>
-        <li><a href="#">It is now <%= @time %></a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Our Peaches</a></li>
         <li><a href="#">Pricing</a></li>
@@ -24,6 +27,7 @@
         <li><a href="#">Log In</a></li>
       </ul>
     </div>
+
     <div id="main">
 
           <%= yield %>
