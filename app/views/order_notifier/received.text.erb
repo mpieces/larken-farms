@@ -1,0 +1,9 @@
+Dear <%= @order.name %>
+
+Thank you for your recent order from Larken Farms.
+
+Here is a summary of your ordered items:
+
+<%= render @order.line_items -%>
+
+We'll send you a separate e-mail when your order ships.
