@@ -13,12 +13,12 @@
       <div class="entry">
         <%= image_tag(product.image_url) %>
         <h3><%= product.title %></h3>
-        <%= sanitize(product.description) %>
+        <%= product.description %>
         <!--  Sanitize method allows us to safely add HTML stylings to make the descriptions for interesting for our customers. -->
         <div class="price_line">
         <!--  Number to currency helper method to format price as a currency -->
           <span class="price"><%= number_to_currency(product.price) %></span>
-          <!-- Added later: -->
+           <!-- remote: true starts ajax call  -->
           <%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>
         </div>
       </div>
