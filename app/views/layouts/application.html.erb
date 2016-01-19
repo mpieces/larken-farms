@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Larken Farms</title>
+  <title><%= @page_title || "Larken Farms" %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class='<%= controller.controller_name %>'>
-  <div id="banner">
-   <!--  (logo) -->
-    <%= @page_title || "Larken Farms" %>
-  </div>
-  <div id="columns">
-    <div id="side">
-      <div id="cart">
-            <!-- render @ cart?? -->
-      </div>
 
+<body class='<%= controller.controller_name %>'>
+
+  <div id="header">
+    <div id="title">Larken Farms Orchard</div>
+  </div>
+
+  <div id="navbar">
       <ul>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Our Peaches</a></li>
@@ -24,8 +21,16 @@
         <li><a href="#">Ordering</a></li>
         <li><a href="#">Location</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">Log In</a></li>
       </ul>
+  </div>
+
+
+  <div id="columns">
+    <div id="side">
+      <div id="cart">
+            <!-- render @ cart?? -->
+      </div>
+
 
       <% if session[:user_id] %>
         <ul>
@@ -36,6 +41,7 @@
         <%= button_to 'Logout', logout_path, method: :delete %>
       <% end %>
     </div>
+  </div>
 
 
     <div id="main">
