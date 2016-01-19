@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
   # added to limit access
   before_action :authorize
 
+  # def current_user
+  #   @current_user = session[:user_id] && User.find_by_id(session[:user_id])
+  # end
+
   protected
 
     def authorize

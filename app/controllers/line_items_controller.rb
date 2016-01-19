@@ -65,7 +65,7 @@ class LineItemsController < ApplicationController
     @line_item.destroy
     respond_to do |format|
       format.html { redirect_to store_url, notice: 'Item was removed.' }
-      format.json { head :no_content }
+      # format.json { head :no_content }
     end
   end
 
@@ -75,7 +75,6 @@ class LineItemsController < ApplicationController
       @line_item = LineItem.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
       params.require(:line_item).permit(:product_id)
     end
