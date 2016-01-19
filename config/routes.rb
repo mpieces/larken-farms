@@ -1,17 +1,27 @@
 Rails.application.routes.draw do
-  #shortens the url that the user has to enter by removing the /index part and map it to the full action
+
+  root 'home#index', as: 'home'
+  get '/about' => 'home#about'
+  get '/peaches' => 'home#peaches'
+  get '/pricing' => 'home#pricing'
+  # get '/ordering' => 'home#ordering'
+  get '/location' => 'home#location'
+  get '/contact' => 'home#contact'
+
+
+  #below shortens the url that the user has to enter by removing the /index part and map it to the full action
   get 'admin' => 'admin#index'
+
   # with session actions, we completely change the url (replacing session/create wtih just 'login')
   # note that login is mapped to both the new and create actions
   # shortcut: wrapping the session route declarations in a block and passing it to a controller() class method
-    controller :sessions do
-      get 'login' => :new
-      post 'login' => :create
-      delete 'logout' => :destroy
-    end
+    # controller :sessions do
+    #   get 'login' => :new
+    #   post 'login' => :create
+    #   delete 'logout' => :destroy
+    # end
 
   # get 'sessions/create'
-
   # get 'sessions/destroy'
 
   resources :users
@@ -26,7 +36,12 @@ Rails.application.routes.draw do
 
 
   resources :products
-  root 'store#index', as: 'store'
+  # root 'store#index', as: 'store'
+  # Replaced above line with following as root page:
+  # root 'home#index', as: 'home'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
