@@ -15,12 +15,13 @@
 
   <div id="navbar">
       <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Our Peaches</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Ordering</a></li>
-        <li><a href="#">Location</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/" <% if @page == 'h' %>class="selected" <% end %>>Home</a></li>
+        <li><a href="/about" <% if @page == 'a' %>class="selected" <% end %>>About Us</a></li>
+        <li><a href="/peaches" <% if @page == 'p' %>class="selected" <% end %>>Our Peaches</a></li>
+        <li><a href="/pricing" <% if @page == 'pr' %>class="selected" <% end %>>Pricing</a></li>
+        <li><a href="/ordering" <% if @page == 'o' %> class="selected" <% end %>>Ordering</a></li>
+        <li><a href="/location" <% if @page == 'l' %>class="selected" <% end %>>Location</a></li>
+        <li><a href="/contact" <% if @page == 'c' %>class="selected" <% end %>>Contact</a></li>
       </ul>
   </div>
 

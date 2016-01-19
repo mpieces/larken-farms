@@ -34,7 +34,8 @@ body {
 }
 
 
-/* Larken Farms Orchard: */
+
+
 #title {
 font-family: MarkerFelt-Thin;
 font-size: 48px;
@@ -81,8 +82,11 @@ text-align: center;
 }
 
 #navbar a:hover {
-  background-color: #7C3328;
-  opacity: 0.5;
+  background-color: #ae651e;
+}
+
+#navbar a.selected {
+  background-color: #57320f;
 }
 
 #notice {
@@ -94,48 +98,15 @@ text-align: center;
   font: bold smaller sans-serif;
 }
 
-#columns {
-  background: #141;
-
-  #main {
-    margin-left: 17em;
-    padding: 1em;
-    background: white;
-  }
-
-  #side {
-    float: left;
-    padding: 1em 2em;
-    width: 13em;
-    background: #141;
-
-    input {
-      font-size: small;
-    }
-
-    #cart {
-      font-size: smaller;
-      color: white;
-
-      table {
-        border-top: 2px solid white;
-        border-bottom: 2px solid white;
-        margin-bottom: 10px;
-      }
-    }
-
-    ul {
-      padding: 0;
-      li {
-        list-style: none;
-        a {
-          color: #bfb;
-          font-size: small;
-        }
-      }
-    }
-  }
+#main {
+  text-align:left;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -140px;
+  background-color: white;
 }
+
 
 .farm_form {
   fieldset {
@@ -173,7 +144,7 @@ text-align: center;
   }
 }
 
-
+/*TINY RESPONSIVE GRID ***********/
 /*
     trg - tiny responsive grid
     author: j. ky marsh
