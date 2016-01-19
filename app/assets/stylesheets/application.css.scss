@@ -19,7 +19,7 @@
 * {
   margin: 0;
   padding: 0;
-  border: 1 px solid red;
+  border: 1px solid red;
 }
 
 * {
@@ -34,24 +34,23 @@ body {
 }
 
 
-
-
 #title {
 font-family: MarkerFelt-Thin;
 font-size: 48px;
 color: #FFFFFF;
 line-height: 52px;
 text-align: center;
+z-index: 1;
 }
 
 
-#header {
-  background-image: image-url('orange-cover.jpg');
-  width: 816px;
-  min-height: 100%;
-  margin: auto;
+.banner {
+  width: 1000px;
+  max-height: 100%;
+  margin-left: 25%;
+  margin-right: 25%;
   border-bottom: 2px solid;
-  text-align: center;
+  z-index: 10;
 }
 
 #navbar ul {
@@ -143,6 +142,8 @@ text-align: center;
     }
   }
 }
+
+
 
 /*TINY RESPONSIVE GRID ***********/
 /*
