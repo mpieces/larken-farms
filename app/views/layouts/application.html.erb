@@ -9,12 +9,11 @@
 
 <body class='<%= controller.controller_name %>'>
 
- <!--  <div id="header"> -->
- <%= image_tag('orange-cover.jpg', alt: "banner", :class => "banner") %>
+  <div id="header">
+    <%= image_tag('orange-cover.jpg', alt: "banner", :class => "banner") %>
     <div id="title">Larken Farms Orchard</div>
- <!--  </div> -->
 
-  <div id="navbar">
+    <div id="navbar">
       <ul>
         <li><a href="/" <% if @page == 'h' %>class="selected" <% end %>>Home</a></li>
         <li><a href="/about" <% if @page == 'a' %>class="selected" <% end %>>About Us</a></li>
@@ -25,6 +24,7 @@
         <li><a href="/location" <% if @page == 'l' %>class="selected" <% end %>>Location</a></li>
         <li><a href="/contact" <% if @page == 'c' %>class="selected" <% end %>>Contact</a></li>
       </ul>
+    </div>
   </div>
 
 
