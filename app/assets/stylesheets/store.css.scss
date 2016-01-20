@@ -1,21 +1,30 @@
 // Place all the styles related to the Store controller here.
 
+#main {
+  /*text-align:center;*/
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -140px;
+  background-color: white;
+}
 
 .store {
   h1 {
-    margin: 0;
+    margin-left: 25%;
     padding-bottom: 0.5em;
     font:  150% sans-serif;
-    color: #226;
-    border-bottom: 4px solid white;
+    color: black;
+    border-bottom: 4px solid black;
   }
 
   /* An entry in the store catalog */
   .entry {
     overflow: auto;
     margin-top: 1em;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
     min-height: 100px;
+    margin-left: 25%;
 
     img {
       width: 80px;
@@ -25,12 +34,19 @@
     }
 
     h3 {
-      font-size: 120%;
       font-family: sans-serif;
       margin-left: 100px;
       margin-top: 0;
       margin-bottom: 2px;
-      color: #227;
+      color: black;
+    }
+
+    h5 {
+      font-family: sans-serif;
+      margin-left: 100px;
+      margin-top: 0;
+      margin-bottom: 2px;
+      color: black;
     }
 
     p, div.price_line {
@@ -44,9 +60,55 @@
     }
 
     .price {
-      color: #44a;
+      color: black;
       font-weight: bold;
       margin-right: 3em;
+    }
+  }
+}
+
+
+/* ADDED: */
+
+#columns {
+  background: #4c9b5e;
+
+  #main {
+    margin-left: 17em;
+    padding: 1em;
+    background: white;
+  }
+
+  #side {
+    float: left;
+    padding: 1em 2em;
+    width: 20em;
+    background: #4c9b5e;
+
+    input {
+      font-size: small;
+    }
+
+    #cart {
+      font-size: large;
+      color: white;
+
+      table {
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        margin-bottom: 10px;
+      }
+    }
+
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        a {
+          color: #bfb;
+          font-size: small;
+        }
+      }
     }
   }
 }
