@@ -28,11 +28,11 @@
   </div>
 
 
-  <div id="columns">
+  <!-- <div id="columns">
     <div id="side">
       <div id="cart">
-            <!-- render @ cart?? -->
-      </div>
+            <!-render @ cart?? -->
+      <!-- </div> -->
 
 
       <% if session[:user_id] %>
@@ -43,11 +43,11 @@
         </ul>
         <%= button_to 'Logout', logout_path, method: :delete %>
       <% end %>
-    </div>
-  </div>
+   <!--  </div>
+  </div> -->
 
 
-    <div id="main">
+    <div id="content">
 
           <%= yield %>
 
