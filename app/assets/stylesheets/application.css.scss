@@ -100,6 +100,20 @@ top: -200px;
   font: bold smaller sans-serif;
 }
 
+#content {
+  /*text-align:center;*/
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  width: 800px;
+  margin: 0 auto -140px;
+  background-color: white;
+}
+
+h1, h2, h3 {
+  font-family: sans-serif;
+}
+
 
 /*FORM:*/
 
