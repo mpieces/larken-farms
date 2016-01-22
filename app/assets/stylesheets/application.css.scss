@@ -19,7 +19,7 @@
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 * {
@@ -106,6 +106,7 @@ top: -200px;
 .farm_form {
   fieldset {
     background: #efe;
+    width: 500px;
 
     legend {
       color: #dfd;
