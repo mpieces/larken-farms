@@ -13,8 +13,16 @@ Product.create!(
 Product.create!(
   title: 'blackberries',
   description: "I am a description",
+  image_url: 'bb-icon.png',
   price: 20.00
 )
+
+Product.create!(
+  title: 'Cherries',
+  description: "I am a cherry description",
+  image_url: 'cherries.jpg',
+  price: 60.00
+  )
 
 # Users
 User.create(
@@ -22,3 +30,9 @@ User.create(
   password: "password",
   admin: true
 )
+
+User.create(
+  name: "mer",
+  password: "123",
+  admin: true
+  )

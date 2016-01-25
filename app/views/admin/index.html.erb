@@ -1,5 +1,5 @@
 
-<h1>Welcome!</h1>
+<h1>Welcome, <%=current_user.name %>!</h1>
 
 <p>It's <%= Time.now %>.</p>
 <p>We have <%= pluralize(@total_orders, "order") %>.</p>
