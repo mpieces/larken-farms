@@ -12,14 +12,14 @@ Rails.application.routes.draw do
   #below shortens the url that the user has to enter by removing the /index part and map it to the full action
   get 'admin' => 'admin#index'
 
-  # with session actions, we completely change the url (replacing session/create wtih just 'login')
+  # with session actions, we completely change the url (replacing session/create with just 'login')
   # note that login is mapped to both the new and create actions
   # shortcut: wrapping the session route declarations in a block and passing it to a controller() class method
-    # controller :sessions do
-    #   get 'login' => :new
-    #   post 'login' => :create
-    #   delete 'logout' => :destroy
-    # end
+    controller :sessions do
+      get 'login' => :new
+      post 'login' => :create
+      delete 'logout' => :destroy
+    end
 
   # get 'sessions/create'
   # get 'sessions/destroy'
@@ -42,6 +42,10 @@ Rails.application.routes.draw do
 
   resources :contacts
   # , only [:new, :create]
+end
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -97,4 +101,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+

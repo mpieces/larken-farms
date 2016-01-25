@@ -6,6 +6,7 @@ class ContactsController < ApplicationController
   end
 
   def create
+    @content_id = true
     @contact = Contact.new(params[:contact])
     @contact.request = request
     if @contact.deliver

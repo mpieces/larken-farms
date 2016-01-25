@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @content_id = true
   end
 
   # GET /products/1
@@ -15,15 +16,19 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    @content_id = true
+
   end
 
   # GET /products/1/edit
   def edit
+    @content_id = true
   end
 
   # POST /products
   # POST /products.json
   def create
+    @content_id = true
     @product = Product.new(product_params)
 
     respond_to do |format|
@@ -40,6 +45,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+    @content_id = true
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
@@ -54,6 +60,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
+    @content_id = true
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
