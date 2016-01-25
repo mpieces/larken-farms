@@ -1,6 +1,7 @@
 raise "Only run this locally" unless Rails.env.development?
 
 Product.delete_all
+User.delete_all
 
 # Products
 Product.create!(
@@ -9,7 +10,7 @@ Product.create!(
   image_url: 'peach-icon.png',
   price: 15.00
 )
-Product.create(
+Product.create!(
   title: 'blackberries',
   description: "I am a description",
   price: 20.00
@@ -18,6 +19,6 @@ Product.create(
 # Users
 User.create(
   name: "Ken",
-  password: "password"
+  password: "password",
   admin: true
 )
