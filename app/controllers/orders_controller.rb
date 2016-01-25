@@ -1,4 +1,4 @@
-class OrdersController < ApplicationController
+class OrdersController < AuthenticatedController
   skip_before_action :authorize, only: [:new, :create]
 
   include CurrentCart
