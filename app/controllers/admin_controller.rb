@@ -1,4 +1,5 @@
-class AdminController < ApplicationController
+class AdminController < AuthenticatedController
+
   # the index action sets up the count of orders
   def index
     @content_id = true
