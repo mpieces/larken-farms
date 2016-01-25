@@ -7,10 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body class='<%= controller.controller_name %>'>
+<body>
 
   <div id="header">
-    <%= image_tag('orange-cover.jpg', alt: "banner", :class => "banner") %>
     <div id="title">Larken Farms Orchard</div>
 
     <div id="navbar">
@@ -27,14 +26,11 @@
     </div>
   </div>
 
-  <div id="<%= @home_id ? 'home' : '' %>"> </div>
-
   <div id="columns">
     <div id="side">
       <div id="cart">
             <!-- <!-render @ cart?? -->
       </div>
-
 
       <% if session[:user_id] %>
         <ul>
@@ -47,12 +43,9 @@
     </div>
   </div>
 
-
-    <div id="<%= @content_id ? 'content' : ''%>">
-
-          <%= yield %>
-
-    </div>
+  <div id="content">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
