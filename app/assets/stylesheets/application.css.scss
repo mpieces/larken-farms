@@ -113,6 +113,7 @@ top: -200px;
   width: 800px;
   margin: 0 auto -140px;
   background-color: white;
+  padding: 20px;
 }
 
 h1, h2, h3 {
@@ -120,18 +121,20 @@ h1, h2, h3 {
 }
 
 
-/*FORM:*/
+/*******FORM:*****************************/
 
 .farm_form {
   fieldset {
     background: #efe;
     width: 500px;
+    margin-left: 50px;
 
     legend {
       color: #dfd;
       background: #141;
       font-family: sans-serif;
       padding: 0.2em 1em;
+      margin-left: 20px;
     }
   }
 
