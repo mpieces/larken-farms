@@ -1,36 +1,53 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+
 <section id="home">
   <div id="slideshow">
     <div>
-      <%= image_tag('dog.jpg') %>
+      <%= image_tag('dog.jpg', :class => "cover-photo") %>
     </div>
     <div>
-      <%= image_tag('family.jpg') %>
+      <%= image_tag('barn.jpg', :class => "cover-photo") %>
     </div>
     <div>
-      <%= image_tag('boxes.jpg') %>
+      <%= image_tag('boxes.jpg', :class => "cover-photo") %>
     </div>
-
+    <div>
+      <%= image_tag('family.jpg', :class => "cover-photo") %>
+    </div>
+    <div>
+      <%= image_tag('truck.jpg', :class => "cover-photo") %>
+    </div>
   </div>
 
-
-  <a href="/InSeasonNow">
-    <div class="box">
-      <%= image_tag('peach-icon.png')%>
-      <p>In Season Now</p>
+  <div class="boxes">
+    <div class="box1">
+      <a href="/InSeasonNow">
+        <div class="box">
+          <%= image_tag('peach-icon.png')%>
+          <p>In Season Now</p>
+        </div>
+      </a>
     </div>
-  </a>
 
-  <a href="/PickYourOwn">
-    <div class="box">
-      <%= image_tag('peach-icon.png')%>
-      <p>Pick Your Own !</p>
+    <div class="box2">
+    <a href="/PickYourOwn">
+      <div class="box">
+        <%= image_tag('peach-icon.png')%>
+        <p>Pick Your Own !</p>
+      </div>
+    </a>
     </div>
-  </a>
+    <div class="box3">
+    <a href="PeachFacts">
+      <div class="box">
+        <%= image_tag('peach-icon.png')%>
+        <p>Peachy Fun Facts</p>
+      </div>
+    </a>
+  </div>
+</div>
 
-  <a href="PeachFacts">
-    <div class="box">
-      <%= image_tag('peach-icon.png')%>
-      <p>Peachy Fun Facts</p>
-    </div>
-  </a>
 </section>
