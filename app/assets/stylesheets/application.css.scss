@@ -28,6 +28,11 @@
   box-sizing: border-box;
 }
 
+/* ADDED FOR CONTACT FORM: */
+.hidden {
+  display: none;
+}
+
 body {
   background-image: image-url('sack.jpg');
   background-size: cover;

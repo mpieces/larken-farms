@@ -27,10 +27,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+
+gem 'mail_form', '~> 1.5.0.rc'
+gem 'simple_form', '~> 3.0.0.rc'
+
 # Gems for CC processing
 gem 'activemerchant', '~> 1.31'
 gem 'haml', '~> 4.0'
 gem 'kaminari', '~> 0.14'
+
+
+
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'

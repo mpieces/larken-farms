@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   get '/about' => 'home#about'
   get '/peaches' => 'home#peaches'
   get '/pricing' => 'home#pricing'
-  # get '/ordering' => 'home#ordering'
+  # get '/ordering' => 'home#ordering' see below store#index
   get '/location' => 'home#location'
-  get '/contact' => 'home#contact'
+  get '/contacts' => 'contacts#new'
 
 
   #below shortens the url that the user has to enter by removing the /index part and map it to the full action
@@ -40,7 +40,8 @@ Rails.application.routes.draw do
   # Replaced above line with following as root page:
   # root 'home#index', as: 'home'
 
-
+  resources :contacts
+  # , only [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

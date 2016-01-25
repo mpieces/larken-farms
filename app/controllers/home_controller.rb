@@ -38,8 +38,8 @@ class HomeController < ApplicationController
 
   def contact
     @page_title = "Contact Us"
-    @page = 'c'
-    @content_id = true
+    # @page = 'c'
+    # @content_id = true
   end
 
 end
