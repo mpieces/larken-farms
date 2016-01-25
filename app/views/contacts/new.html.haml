@@ -1,14 +1,6 @@
-<div class="farm_form">
-  <fieldset>
-    <legend>Contact Us</legend>
-
-
-
-
-  </fieldset>
-</div>
-  %h1 Contact Us
-  = simple_form_for @contact, :html => {:class => 'farm-form' } do |f|
+.container
+  %h1 Contact
+  = simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f|
     = f.input :name, :required => true
     = f.input :email, :required => true
     = f.input :message, :as => :text, :required => false, :input_html => {:rows => 10}
@@ -17,3 +9,11 @@
       = f.input :nickname, :hint => 'Leave this field blank!'
     .form-actions
       = f.button :submit, 'Send message', :class=> "btn btn-primary"
+
+
+
+
+
+
+
+
