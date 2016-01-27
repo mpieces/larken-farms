@@ -1,7 +1,10 @@
-<% if notice %>
-<p id="notice"><%= notice %></p>
+<% if flash[:notice].present? %>
+  <p id="notice"><%= flash[:notice] %></p>
 <% end %>
 
+<% if flash[:error].present? %>
+  <p class="error"><%= flash[:error] %></p>
+<% end %>
 
 <section id="home">
   <div id="slideshow">
@@ -20,6 +23,14 @@
     <div>
       <%= image_tag('truck.jpg', :class => "cover-photo") %>
     </div>
+  </div>
+
+  <div class="mailing_list">
+
+    <%= form_for Subscriber.new do |f| %>
+      <%= f.text_field :email, placholder: "email address" %>
+      <%= f.submit "Join the Mailing List!" %>
+    <% end %>
   </div>
 
   <div class="boxes">

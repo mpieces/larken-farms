@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'home#index', as: 'home'
+  root 'home#index'
   get '/about' => 'home#about'
   get '/peaches' => 'home#peaches'
   get '/pricing' => 'home#pricing'
@@ -39,6 +39,8 @@ Rails.application.routes.draw do
   # root 'store#index', as: 'store'
   # Replaced above line with following as root page:
   # root 'home#index', as: 'home'
+
+  resources :subscribers, only: [:create]
 
   resources :contacts
   # , only [:new, :create]
