@@ -40,6 +40,8 @@ gem 'kaminari', '~> 0.14'
 # gem 'capistrano-rails', group: :development
 
 group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
   gem "letter_opener"
 end
 
