@@ -8,20 +8,20 @@ LineItem.delete_all
 Order.delete_all
 
 # Products
-Product.create(
+Product.create!(
   title: 'Peaches',
   description: "1 lb. of juicy Whiteflesh peaches",
   image_url: 'peach-icon.png',
   price: 15.00
 )
-Product.create(
+Product.create!(
   title: 'blackberries',
   description: "I am a description",
   image_url: 'bb-icon.png',
   price: 20.00
 )
 
-Product.create(
+Product.create!(
   title: 'Cherries',
   description: "I am a cherry description",
   image_url: 'cherries.jpg',
@@ -29,13 +29,13 @@ Product.create(
   )
 
 # Users
-User.create(
+User.create!(
   name: "Ken",
   password: "password",
   admin: true
 )
 
-User.create(
+User.create!(
   name: "mer",
   password: "123",
   admin: true

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   # get '/ordering' => 'home#ordering' see below store#index
   get '/location' => 'home#location'
   get '/contacts' => 'contacts#new'
+  get '/InSeasonNow' => 'home#season'
+  get '/PickYourOwn' => 'home#pick'
+  get '/PeachFacts' => 'home#facts'
 
 
   #below shortens the url that the user has to enter by removing the /index part and map it to the full action
