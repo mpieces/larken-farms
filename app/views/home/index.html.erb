@@ -26,10 +26,13 @@
   </div>
 
   <div class="mailing_list">
-
+    <h1>Stay updated!</h1>
+    <br>
     <%= form_for Subscriber.new do |f| %>
-      <%= f.text_field :email, placholder: "email address" %>
-      <%= f.submit "Join the Mailing List!" %>
+      <%= f.email_field(:email, placeholder: 'Email Address') %>
+      <br>
+      <br>
+      <%= f.submit "Join" %>
     <% end %>
   </div>
 
