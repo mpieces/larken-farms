@@ -29,10 +29,10 @@
     <h1>Stay updated!</h1>
     <br>
     <%= form_for Subscriber.new do |f| %>
-      <%= f.email_field(:email, placeholder: 'Email Address') %>
+      <%= f.email_field(:email, id: 'email', placeholder: 'me@example.com') %>
       <br>
       <br>
-      <%= f.submit "Join" %>
+      <%= f.submit("Join", id: 'join') %>
     <% end %>
   </div>
 
