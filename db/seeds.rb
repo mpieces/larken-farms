@@ -49,3 +49,8 @@ User.create!(
     pay_type: "Visa"
   )
 end
+
+(1..30).each do |i|
+  Subscriber.create(
+    email: "customer-#{i}@example.com")
+end

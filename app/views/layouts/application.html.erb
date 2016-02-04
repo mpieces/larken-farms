@@ -20,7 +20,7 @@
         <li><a href="/peaches" <% if @page == 'p' %>class="selected" <% end %>>Our Peaches</a></li>
         <li><a href="/pricing" <% if @page == 'pr' %>class="selected" <% end %>>Pricing</a></li>
        <!--  STORE CATALOG: -->
-        <li><a href="/store/index" <% if @page == 'o' %> class="selected" <% end %>>Ordering</a></li>
+        <li><a href="/stores" <% if @page == 'o' %> class="selected" <% end %>>Ordering</a></li>
         <li><a href="/location" <% if @page == 'l' %>class="selected" <% end %>>Location</a></li>
         <li><a href="/contacts" <% if @page == 'c' %>class="selected" <% end %>>Contact</a></li>
       </ul>
@@ -37,7 +37,7 @@
           <ul>
             <li><%= link_to 'Orders', orders_path %></li>
             <li><%= link_to 'Products', products_path %></li>
-            <li><%= link_to 'Subscribers', contact_path %></li>
+            <li><%= link_to 'Subscribers', subscribers_path %></li>
             <li><%= link_to 'Admins', users_path %></li>
           </ul>
           <%= button_to 'Logout', logout_path, method: :delete %>

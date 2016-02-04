@@ -40,7 +40,7 @@ Rails.application.routes.draw do
 
   resources :products
 
-  resources :subscribers, only: [:create]
+  resources :subscribers, only: [:create, :index]
 
   resources :contacts
   # , only [:new, :create]
