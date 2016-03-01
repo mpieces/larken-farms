@@ -1,13 +1,13 @@
-/*
- *= require_tree .
- *= require_self
-*/
+
+//  *= require_tree .
+//  *= require_self
+// */
 
 /* Remove default margin and padding from every element */
 * {
   margin: 0;
   padding: 0;
-  /*border: 1px solid red;*/
+  border: 1px solid red;
 }
 
 * {
@@ -58,6 +58,7 @@ body {
   padding-top: 70px;
 }
 
+// NAVBAR ####################################
 #navbar ul {
   background-color: #DD8938;
   border: 4px solid #7C3328;
@@ -67,7 +68,6 @@ body {
   width: 1000px;
   list-style-type: none;
 }
-
 #navbar li {
   display: inline-block;
 }
@@ -89,6 +89,7 @@ body {
 #navbar a.selected {
   background-color: #57320f;
 }
+// ################################################
 
 #notice {
   color: #000 !important;
@@ -101,12 +102,11 @@ body {
 }
 
 #content {
-  /*text-align:center;*/
   min-height: 100%;
   height: auto !important;
-  height: 100%;
+  // height: 100%;
   width: 1000px;
-  margin: 10px auto -140px;
+  margin: 34px auto -140px;
   background-color: white;
   padding: 20px;
   margin-bottom: -100px;
@@ -128,6 +128,7 @@ footer {
   margin: 0 auto;
 }
 
+// FACEBOOK LOGO: ##########################
 .media {
   position: absolute;
   right: 20px;
@@ -138,12 +139,12 @@ h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
 }
 
-.title {
-  margin-top: 25px;
-  margin-left: 100px;
-}
+// .title {
+//   margin-top: 25px;
+//   margin-left: 100px;
+// }
 
-
+// MAILING LIST BOX: #########################
 .mailing_list {
   float: left;
   text-align: center;
@@ -173,7 +174,8 @@ h1, h2, h3 {
   font-size: 120%;
 }
 
-/*******FORM:*****************************/
+
+// FORM:*****************************/
 
 .farm_form {
   fieldset {
@@ -293,7 +295,7 @@ section#home
     text-decoration: none;
   }
 
-/* ORDERING/PRODUCT CATALOG */
+/* PRODUCT CATALOG */
 
 .products {
   table {
@@ -329,7 +331,7 @@ section#home
   }
 
   .list_actions {
-    font-size:    x-small;
+    font-size:    small;
     text-align:   right;
     padding-left: 1em;
   }
@@ -344,17 +346,12 @@ section#home
 }
 
 
-/* STORE */
+/* STORE (CUSTOMER VIEW) */
 
-
-#main {
-  /*text-align:center;*/
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  width: 800px;
-  margin: 0 auto -140px;
-  background-color: white;
+.store {
+  width: 75%;
+  position: absolute;
+  right: 50px;
 }
 
 .store {
@@ -365,7 +362,6 @@ section#home
     color: black;
     border-bottom: 4px solid #4c9b5e;
   }
-
 
   /* An entry in the store catalog */
 
@@ -543,8 +539,21 @@ iframe {
   margin-top: 25px;
 }
 
-/*
-input {
+#admin-content {
+    // float: left;
+    padding: 1em 2em;
+    // width: 250px;
+    background: radial-gradient(#4c9b5e, #bfb);
+    // margin: 0 auto;
+    // position: absolute;
+    // left: 25px;
+    // top: 100px;
+    border: 4px solid #4c9b5e;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+    position: fixed;
+    margin-left: 30px;
+
+    input {
       font-size: medium;
       font-family: 'Roboto', sans-serif;
       border: 3px solid #4c9b5e;
@@ -552,4 +561,13 @@ input {
       background: white;
       padding: 5px;
       margin-top: 5px;
-} */
+
+    input:hover {
+      background: green;
+
+    }
+  }
+}
+
+
+

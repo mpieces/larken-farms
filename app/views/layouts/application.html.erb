@@ -27,13 +27,10 @@
     </div>
   </div>
 
-  <div id="columns">
-
-    <% if session[:user_id] %>
-      <div id="side">
-        <div id="cart">
-        </div>
-
+   <% if session[:user_id] %>
+        <div id="admin-content">
+          <!-- <div id="cart"> -->
+          <!-- </div> -->
           <ul>
             <li><%= link_to 'Orders', orders_path %></li>
             <li><%= link_to 'Products', products_path %></li>
@@ -41,13 +38,13 @@
             <li><%= link_to 'Admins', users_path %></li>
           </ul>
           <%= button_to 'Logout', logout_path, method: :delete %>
-      </div>
+        </div>
     <% end %>
 
-  </div>
-
   <div id="content">
+
     <%= yield %>
+
   </div>
 
   <footer>

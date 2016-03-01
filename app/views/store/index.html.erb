@@ -1,16 +1,20 @@
 <!-- <h1>Store#index</h1>
 <p>Find me in app/views/store/index.html.erb</p> -->
-<div id="main">
+
+<!-- <div id="main"> -->
+
+  <%= render @cart %>
+
+
   <div class="store">
 
     <% if notice %>
-    <p id="notice"><%= notice %></p>
+      <p id="notice"><%= notice %></p>
     <% end %>
 
     <br>
     <h1>Larken Farms Products</h1>
 
-    <%= render @cart %>
 
     <% cache ['store', Product.latest] do %>
       <% @products.each do |product| %>
@@ -19,7 +23,7 @@
             <%= image_tag(product.image_url) %>
             <h3><%= product.title %></h3>
             <h5><%= product.description %></h5>
-            <!--  Sanitize method allows us to safely add HTML stylings to make the descriptions for interesting for our customers. -->
+
             <div class="price_line">
             <!--  Number to currency helper method to format price as a currency -->
               <span class="price"><%= number_to_currency(product.price) %></span>
@@ -31,4 +35,4 @@
       <% end %>
     <% end %>
   </div>
-</div>
+

@@ -1,8 +1,9 @@
 <!-- moved unless cart.line_items.empty? down to line 5 to keep css intact -->
-<!-- <div id="columns"> -->
+
   <div id="side">
     <div id="cart">
-      <% unless cart.line_items.empty? %>
+      <% if cart.line_items.any? %>
+
       <div class="cart_title">Your Cart</div>
         <table>
           <!--  Renders line_items partial -->
@@ -20,4 +21,3 @@
 <% end %>
     </div>
   </div>
-<!-- </div> -->
