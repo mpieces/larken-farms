@@ -7,7 +7,7 @@
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 * {
@@ -101,10 +101,11 @@ body {
   width: 50%;
 }
 
+// YIELD CONTENT: #####################
 #content {
   min-height: 100%;
   height: auto !important;
-  // height: 100%;
+  height: 100%;
   width: 1000px;
   margin: 34px auto -140px;
   background-color: white;
@@ -128,104 +129,7 @@ footer {
   margin: 0 auto;
 }
 
-// FACEBOOK LOGO: ##########################
-.media {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
-h1, h2, h3 {
-  font-family: 'Roboto', sans-serif;
-}
-
-// .title {
-//   margin-top: 25px;
-//   margin-left: 100px;
-// }
-
-// MAILING LIST BOX: #########################
-.mailing_list {
-  float: left;
-  text-align: center;
-  position: absolute;
-  top: 100px;
-  left: 30px;
-  padding: 20px;
-  border: 4px solid #7C3328;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
-  background-color: #DD8938;
-  color: white;
-}
-
-#join {
-  color: white;
-  border-radius: 12px;
-  width: 100px;
-  height: 25px;
-  font-size: 120%;
-  font-weight: bold;
-  box-shadow: 4px 4px 2px #4c9b5e;
-  background: radial-gradient(#bfb, #4c9b5e);
-  border-style: none;
-}
-
-#email {
-  font-size: 120%;
-}
-
-
-// FORM:*****************************/
-
-.farm_form {
-  fieldset {
-    background: #efe;
-    width: 500px;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-bottom: 50px;
-
-    legend {
-      color: #dfd;
-      background: #141;
-      font-family: sans-serif;
-      padding: 0.2em 1em;
-      margin-left: 20px;
-    }
-  }
-
-  form {
-
-    label {
-      width: 5em;
-      float: left;
-      text-align: right;
-      padding-top: 0.2em;
-      margin-right: 0.1em;
-      display: block;
-    }
-
-    select, textarea, input {
-      margin-left: 0.5em;
-    }
-
-    .submit {
-      margin-left: 10em;
-    }
-
-    br {
-      display: none
-    }
-  }
-}
-
-.field {
-  margin-top: 10px;
-}
-
-
 /* HOME PAGE: ************************************ */
-
 section#home {
   position: relative;
 }
@@ -281,7 +185,7 @@ section#home
 
   }
 
-  /* LINKS: */
+/* HOME PAGE LINKS: */
 
   .boxes a {
     text-decoration: none;
@@ -294,59 +198,102 @@ section#home
     line-height: 27px;
     text-decoration: none;
   }
+// FACEBOOK LOGO: ##########################
+.media {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
 
-/* PRODUCT CATALOG */
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+}
 
-.products {
-  table {
-    border-collapse: collapse;
-  }
+// .title {
+//   margin-top: 25px;
+//   margin-left: 100px;
+// }
 
-  table tr td {
-    padding: 5px;
-    vertical-align: top;
-  }
+// MAILING LIST BOX: #########################
+.mailing_list {
+  float: left;
+  text-align: center;
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  padding: 20px;
+  border: 4px solid #7C3328;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+  background-color: #DD8938;
+  color: white;
+}
 
-  .list_image {
-    width:  60px;
-    height: 70px;
-  }
+#join {
+  color: white;
+  border-radius: 12px;
+  width: 100px;
+  height: 25px;
+  font-size: 120%;
+  font-weight: bold;
+  box-shadow: 4px 4px 2px #4c9b5e;
+  background: radial-gradient(#bfb, #4c9b5e);
+  border-style: none;
+}
 
-  .list_description {
-    width: 60%;
-
-    dl {
-      margin: 0;
-    }
-
-    dt {
-      color:        #244;
-      font-weight:  bold;
-      font-size:    larger;
-    }
-
-    dd {
-      margin: 0;
-    }
-  }
-
-  .list_actions {
-    font-size:    small;
-    text-align:   right;
-    padding-left: 1em;
-  }
-
-  .list_line_even {
-    background: white;
-  }
-
-  .list_line_odd {
-    background: #bfb;
-  }
+#email {
+  font-size: 120%;
 }
 
 
-/* STORE (CUSTOMER VIEW) */
+// FORMS:*****************************/
+
+.farm_form {
+  fieldset {
+    background: #efe;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+
+    legend {
+      color: #dfd;
+      background: #141;
+      font-family: sans-serif;
+      padding: 0.2em 1em;
+      margin-left: 20px;
+    }
+  }
+
+  form {
+
+    label {
+      width: 5em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
+
+    .submit {
+      margin-left: 10em;
+    }
+
+    br {
+      display: none
+    }
+  }
+}
+
+.field {
+  margin-top: 10px;
+}
+
+/* STORE (CUSTOMER VIEW): ############################# */
 
 .store {
   width: 75%;
@@ -413,7 +360,7 @@ section#home
   }
 }
 
-/* SIDEBAR */
+/* CART CONTAINER */
 
 .carts, #side #cart {
   .item_price, .total_line {
@@ -481,6 +428,88 @@ section#home
 }
 
 
+// ADMIN SIDEBAR: #####################
+
+#admin-content {
+    // float: left;
+    padding: 1em 2em;
+    // width: 250px;
+    background: radial-gradient(#4c9b5e, #bfb);
+    // margin: 0 auto;
+    // position: absolute;
+    // left: 25px;
+    // top: 100px;
+    border: 4px solid #4c9b5e;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+    position: fixed;
+    margin-left: 30px;
+
+    input {
+      font-size: medium;
+      font-family: 'Roboto', sans-serif;
+      border: 3px solid #4c9b5e;
+      border-radius: 12px;
+      background: white;
+      padding: 5px;
+      margin-top: 5px;
+
+    input:hover {
+      background: green;
+    }
+  }
+}
+
+/* PRODUCT CATALOG: ############################# */
+
+.products {
+  table {
+    border-collapse: collapse;
+  }
+
+  table tr td {
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  .list_image {
+    width:  60px;
+    height: 70px;
+  }
+
+  .list_description {
+    width: 60%;
+
+    dl {
+      margin: 0;
+    }
+
+    dt {
+      color:        #244;
+      font-weight:  bold;
+      font-size:    larger;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+
+  .list_actions {
+    font-size:    small;
+    text-align:   right;
+    padding-left: 1em;
+  }
+
+  .list_line_even {
+    background: white;
+  }
+
+  .list_line_odd {
+    background: #bfb;
+  }
+}
+
+
 /* ABOUT US PAGE */
 
 .aboutus {
@@ -491,6 +520,24 @@ section#home
 .text {
   margin-left: 40px;
   margin-right: 40px;
+}
+
+/* LOCATION: ########################### */
+.location {
+  float: left;
+  margin-left: 100px;
+  margin-top: 25px;
+  padding: 10px;
+  border: 4px solid #7C3328;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+  background-color: #DD8938;
+  color: white;
+}
+
+iframe {
+  float: left;
+  margin-left: 100px;
+  margin-top: 25px;
 }
 
 /* CONTACT FORM  */
@@ -521,53 +568,75 @@ label {
   color: white;
 }
 
-/* LOCATION: ******************************* */
-.location {
-  float: left;
-  margin-left: 100px;
-  margin-top: 25px;
-  padding: 10px;
-  border: 4px solid #7C3328;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
-  background-color: #DD8938;
+// CARDS
+
+.holder {
+  width: 200px;
+  height: 260px;
+  position: relative;
+  perspective: 800px;
+}
+
+#card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+#card figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 2px solid black;
+}
+
+#card .front {
+  // background: image-url('redskin.jpeg');
+  text-align: center;
+}
+
+#card .back {
+  background: green;
   color: white;
+  text-align: center;
+  transform: rotateY( 180deg );
 }
 
-iframe {
+#card.flipped {
+  transform: rotateY( 180deg );
+}
+
+// IMAGE GALLERY
+div.img {
+  margin: 5px;
+  border: 1px solid #ccc;
   float: left;
-  margin-left: 100px;
-  margin-top: 25px;
+  width: 180px;
 }
 
-#admin-content {
-    // float: left;
-    padding: 1em 2em;
-    // width: 250px;
-    background: radial-gradient(#4c9b5e, #bfb);
-    // margin: 0 auto;
-    // position: absolute;
-    // left: 25px;
-    // top: 100px;
-    border: 4px solid #4c9b5e;
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
-    position: fixed;
-    margin-left: 30px;
-
-    input {
-      font-size: medium;
-      font-family: 'Roboto', sans-serif;
-      border: 3px solid #4c9b5e;
-      border-radius: 12px;
-      background: white;
-      padding: 5px;
-      margin-top: 5px;
-
-    input:hover {
-      background: green;
-
-    }
-  }
+div.img img {
+  width: 100%;
+  height: auto;
 }
 
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
 
+#peach-list {
+  position: absolute;
+  right: 25%;
+}
 
+.fb-post {
+  position: absolute;
+  top: 200px;
+  margin: 0 auto;
+
+}

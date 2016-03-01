@@ -18,3 +18,14 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).ready(function() {
+  flip();
+});
+
+var flip = function() {
+    var card = $('#card');
+    card.on ('click', function() {
+      card.toggleClass('flipped');
+  });
+};
+
