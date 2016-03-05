@@ -198,6 +198,7 @@ section#home
     line-height: 27px;
     text-decoration: none;
   }
+
 // FACEBOOK LOGO: ##########################
 .media {
   position: absolute;
@@ -555,18 +556,18 @@ label {
   margin-left: 50px;
 }
 
-.hours {
-  float: right;
-  text-align: center;
-  position: absolute;
-  top: 45px;
-  right: 200px;
-  padding: 20px;
-  border: 4px solid #7C3328;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
-  background-color: #DD8938;
-  color: white;
-}
+// .hours {
+//   float: right;
+//   text-align: center;
+//   position: absolute;
+//   top: 45px;
+//   right: 200px;
+//   padding: 20px;
+//   border: 4px solid #7C3328;
+//   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+//   background-color: #DD8938;
+//   color: white;
+// }
 
 // CARDS
 
@@ -634,9 +635,8 @@ div.desc {
   right: 25%;
 }
 
-.fb-post {
-  position: absolute;
-  top: 200px;
-  margin: 0 auto;
-
-}
+// .fb-post {
+//   position: absolute;
+//   top: 200px;
+//   margin: 0 auto;
+// }

@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/about' => 'home#about'
   get '/peaches' => 'home#peaches'
-  get '/pricing' => 'home#pricing'
+  get '/gallery' => 'home#gallery'
   # get '/ordering' => 'home#ordering' see below store#index
   get '/location' => 'home#location'
   get '/contacts' => 'contacts#new'
+  get '/FAQs' => 'home#FAQs'
   get '/InSeasonNow' => 'home#season'
   get '/PickYourOwn' => 'home#pick'
   get '/PeachFacts' => 'home#facts'

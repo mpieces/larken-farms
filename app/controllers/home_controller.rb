@@ -15,9 +15,9 @@ class HomeController < ApplicationController
     @page = 'p'
   end
 
-  def pricing
-    @page_title = "Pricing"
-    @page = 'pr'
+  def gallery
+    @page_title = "Gallery"
+    @page = 'g'
   end
 
   def ordering
@@ -32,7 +32,12 @@ class HomeController < ApplicationController
 
   def contact
     @page_title = "Contact Us"
-    # @page = 'c'
+    @page = 'c'
+  end
+
+  def FAQs
+    @page_title = "FAQ's"
+    @page = 'f'
   end
 
   def season
@@ -41,7 +46,7 @@ class HomeController < ApplicationController
   def pick
   end
 
-  def facts
-  end
+  # def facts
+  # end
 
 end
