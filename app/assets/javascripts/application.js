@@ -13,8 +13,8 @@
 // about supported directives.
 //
 //= require jquery
-
 //= require jquery_ujs
+//= require lightbox
 //= require turbolinks
 //= require_tree .
 

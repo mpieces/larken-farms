@@ -29,6 +29,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'mail_form', '~> 1.5.0.rc'
 gem 'simple_form', '~> 3.0.0.rc'
+gem 'paperclip'
+gem 'aws-sdk', '<2.0'
 
 # Gems for CC processing
 gem 'haml', '~> 4.0'
