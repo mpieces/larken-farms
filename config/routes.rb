@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :pics
   root 'home#index'
   get '/about' => 'home#about'
   get '/peaches' => 'home#peaches'
-  get '/gallery' => 'home#gallery'
+  get '/gallery' => 'pics#index'
   # get '/ordering' => 'home#ordering' see below store#index
   get '/location' => 'home#location'
   get '/contacts' => 'contacts#new'
@@ -45,6 +46,7 @@ Rails.application.routes.draw do
 
   resources :contacts
   # , only [:new, :create]
+
 end
 
 

@@ -1,0 +1,18 @@
+<%= form_for(@pic), html: { multipart: true } do |f| %>
+  <!-- error notification -->
+
+  <!-- <div class="form-inputs"> -->
+
+    <%= f.label :image %>
+    <%= f.text_field :img, placeholder: "Picture" %>
+
+
+    <%= f.label :caption %>
+    <%= f.text_area :caption, rows: 10, cols: 40 %>
+
+ <!--  </div> -->
+
+  <!-- <div class="form-actions"> -->
+    <%= f.submit %>
+<!--   </div> -->
+<% end %>
