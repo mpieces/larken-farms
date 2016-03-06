@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/about' => 'home#about'
   get '/peaches' => 'home#peaches'
-  get '/gallery' => 'pics#index'
+  get '/gallery' => 'photos#index'
   # get '/ordering' => 'home#ordering' see below store#index
   get '/location' => 'home#location'
   get '/contacts' => 'contacts#new'
@@ -45,6 +45,7 @@ Rails.application.routes.draw do
 
   resources :contacts
   # , only [:new, :create]
+  resources :photos, only: [:new, :create, :index, :destroy]
 
 end
 
