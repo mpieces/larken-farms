@@ -1,9 +1,9 @@
-<h1>Photos</h1>
+<h1>Photo Gallery</h1>
 
 <!-- (can use partial here) -->
 <% @photos.each do |photo| %>
 
-<%= link_to image_tag(photo.image.url(:thumb), class: "media-object"), photo.image.url, target: '_blank' %>
+<%= link_to image_tag(photo.image.url(:original), class: "media-object"), photo.image.url, target: '_blank' %>
 <h4 class="media-heading"><%= photo.title %></h4>
 <%= link_to "Edit", edit_photo_path(photo) %>
 <%= link_to "Delete", photo_path(photo), method: :delete, data: {confirm: "You sure?" } %>
