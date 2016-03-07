@@ -5,6 +5,7 @@
 
 <%= link_to image_tag(photo.image.url(:thumb), class: "media-object"), photo.image.url, target: '_blank' %>
 <h4 class="media-heading"><%= photo.title %></h4>
+<%= link_to "Edit", edit_photo_path(photo) %>
 <%= link_to "Delete", photo_path(photo), method: :delete, data: {confirm: "You sure?" } %>
 <% end %>
 

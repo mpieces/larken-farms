@@ -18,6 +18,16 @@ class PhotosController < ApplicationController
     end
   end
 
+  def update
+    @photo = Photo.find(params[:id])
+    if @photo.update(photo_params)
+      flash[:success] = "Updated"
+      redirect_to photos_path
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     Photo.find(params[:id]).destroy
     flash[:success] = "Photo deleted"

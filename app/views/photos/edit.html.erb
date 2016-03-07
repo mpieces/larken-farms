@@ -1,14 +1,14 @@
-<h1>Upload Photo</h1>
+<h1>Edit captions</h1>
 
 <%= form_for @photo do |f| %>
-  <!-- (render error messages) -->
+  <!-- render error messages -->
   <p>Caption</p>
   <%= f.text_area :title, rows: 10, cols: 50 %>
 
   <%= f.label :image %>
   <%= f.file_field :image %>
 
-  <%= f.submit 'Upload' %>
+  <%= f.submit 'Save Changes' %>
 
 <% end %>
 
