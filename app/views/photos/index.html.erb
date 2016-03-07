@@ -3,9 +3,9 @@
 <!-- (can use partial here) -->
 <% @photos.each do |photo| %>
 
-<%= link_to image_tag(photo.image.url, class: "media-object"), photo.image.url, target: '_blank' %>
+<%= link_to image_tag(photo.image.url(:thumb), class: "media-object"), photo.image.url, target: '_blank' %>
 <h4 class="media-heading"><%= photo.title %></h4>
-<%= link_to "Delete", photo, method: :delete, data: {confirm: "You sure?" } %>
+<%= link_to "Delete", photo_path(photo), method: :delete, data: {confirm: "You sure?" } %>
 <% end %>
 
 <%= link_to "Upload Photo", new_photo_path %>
