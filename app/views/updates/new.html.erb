@@ -1,0 +1,12 @@
+<h1>Add a new update</h1>
+
+<%= form_for @update do |f| %>
+
+
+
+  <%= f.text_area :content, rows: 10, cols: 50, :placeholder => "update...." %>
+
+  <%= f.submit 'Submit' %>
+
+<% end %>
+

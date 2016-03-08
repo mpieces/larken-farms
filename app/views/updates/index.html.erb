@@ -1,0 +1,23 @@
+<!-- ALL UPDATES -->
+
+<div id="updates">
+  <table>
+    <thead>
+      <tr>
+        <th colspan="1"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @updates.each do |update| %>
+        <tr>
+          <td><%= update.created_at.strftime("%A, %B %e, %Y") %></td>
+        </tr>
+        <tr>
+          <td><%= update.content %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+

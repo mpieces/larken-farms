@@ -1,5 +1,9 @@
 class PhotosController < ApplicationController
 
+  # skip_before_action :authorize, only: :index
+  # Skip authorization, but can only view index?
+  # before_action :authorize
+
   def index
     @photos = Photo.order('created_at desc')
   end
@@ -34,14 +38,10 @@ class PhotosController < ApplicationController
     redirect_to photos_path
   end
 
-
  private
 
   def photo_params
     params.require(:photo).permit(:image, :title)
   end
-
-
-
 
 end
