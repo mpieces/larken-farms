@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   get '/about' => 'home#about'
-  get '/peaches' => 'home#peaches'
+  get '/produce' => 'home#produce'
   get '/gallery' => 'photos#index'
   # get '/ordering' => 'home#ordering' see below store#index
   get '/location' => 'home#location'

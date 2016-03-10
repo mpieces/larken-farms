@@ -1,4 +1,6 @@
-class UpdatesController < ApplicationController
+class UpdatesController < AuthenticatedController
+
+  skip_before_action :authorize, only: :index
 
   def index
     @updates = Update.order('created_at desc')

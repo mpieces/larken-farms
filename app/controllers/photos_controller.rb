@@ -1,8 +1,8 @@
-class PhotosController < ApplicationController
+class PhotosController < AuthenticatedController
 
-  # skip_before_action :authorize, only: :index
-  # Skip authorization, but can only view index?
-  # before_action :authorize
+  skip_before_action :authorize, only: :index
+  # Skip authorization, but can only view index
+
 
   def index
     @photos = Photo.order('created_at desc')

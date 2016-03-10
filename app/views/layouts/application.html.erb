@@ -17,7 +17,7 @@
       <ul>
         <li><a href="/" <% if @page == 'h' %>class="selected" <% end %>>Home</a></li>
         <li><a href="/about" <% if @page == 'a' %>class="selected" <% end %>>About Us</a></li>
-        <li><a href="/peaches" <% if @page == 'p' %>class="selected" <% end %>>Our Peaches</a></li>
+        <li><a href="/produce" <% if @page == 'p' %>class="selected" <% end %>>Our Produce</a></li>
         <li><a href="/gallery" <% if @page == 'g' %>class="selected" <% end %>>Gallery</a></li>
        <!--  STORE CATALOG: -->
         <li><a href="/stores" <% if @page == 'o' %> class="selected" <% end %>>Ordering</a></li>
@@ -33,7 +33,7 @@
           <!-- <div id="cart"> -->
           <!-- </div> -->
           <ul>
-            <li><%= link_to 'Update Photos', new_photo_path %></li>
+            <li><%= link_to 'Update Photos', photos_path %></li>
             <li><%= link_to 'Update Home Page', new_update_path %></li>
             <li><%= link_to 'Orders', orders_path %></li>
             <li><%= link_to 'Products', products_path %></li>
@@ -50,9 +50,7 @@
 
   </div>
 
-  <div class="updates">
-    <% render _updates %>
-  </div>
+
 
   <footer>
   </footer>
