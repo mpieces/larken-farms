@@ -20,6 +20,8 @@
 
 $(document).ready(function() {
   flip();
+  // update();
+  // $('#updates').append($('.new-update');
 });
 
 var flip = function() {
@@ -28,4 +30,27 @@ var flip = function() {
       card.toggleClass('flipped');
   });
 };
+
+
+  $('#change').on('click', function() {
+    $('#updates').append('#update_content')
+  });
+
+// function addContent(updates, content) {
+//   document.getElementById(updates).innerHTML = content;
+// };
+
+// var update = function() {
+//   $('#updates').replaceWith('td.new-update').html();
+// };
+
+// var update = function() {
+//   var $updates = $('<div id="updates">');
+//   var $newUpdate = $('<td class="new-update">update</td>');
+//   $updates.prepend($newUpdate);
+// };
+
+
+
+
 

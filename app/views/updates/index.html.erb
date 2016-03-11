@@ -1,6 +1,6 @@
 <!-- ALL UPDATES -->
 
-<div id="updates">
+<div id="updates-table">
   <table>
     <thead>
       <tr>
@@ -10,10 +10,10 @@
     <tbody>
       <% @updates.each do |update| %>
         <tr>
-          <td><%= update.created_at.strftime("%A, %B %e, %Y") %></td>
+          <td class="new-update"><%= update.created_at.strftime("%A, %B %e, %Y") %></td>
         </tr>
         <tr>
-          <td><%= update.content %></td>
+          <td class="new-update"><%= update.content %></td>
         </tr>
       <% end %>
     </tbody>

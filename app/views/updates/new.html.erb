@@ -1,12 +1,24 @@
 <h1>Add a new update</h1>
+<br>
 
 <%= form_for @update do |f| %>
 
+  <%= f.text_area :content, rows: 10, cols: 50, :placeholder => "update...."%>
 
-
-  <%= f.text_area :content, rows: 10, cols: 50, :placeholder => "update...." %>
-
-  <%= f.submit 'Submit' %>
+  <%= f.submit 'Submit', :name => "doSomething", id: "change" %>
+  <!-- <input type="submit" value="Submit" onClick="addContent('updates', content);"> -->
 
 <% end %>
+
+
+<!-- textarea id=“update_content” name=“update[content]
+
+input name=“commit” type=“submit” value=“Submit” -->
+
+<!-- <form name = "myForm">
+  <textarea rows="10" cols="50" name="content"></textarea>
+  <br>
+  <input type="button" value="Submit" onClick="addContent('updates', document.myForm.content.value);">
+</form> -->
+<div id="updates"></div>
 
