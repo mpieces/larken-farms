@@ -5,7 +5,7 @@
 
   <%= f.text_area :content, rows: 10, cols: 50, :placeholder => "update...."%>
 
-  <%= f.submit 'Submit', :name => "doSomething", id: "change" %>
+  <%= f.submit 'Submit', id: "add" %>
   <!-- <input type="submit" value="Submit" onClick="addContent('updates', content);"> -->
 
 <% end %>
@@ -20,5 +20,5 @@ input name=“commit” type=“submit” value=“Submit” -->
   <br>
   <input type="button" value="Submit" onClick="addContent('updates', document.myForm.content.value);">
 </form> -->
-<div id="updates"></div>
+<!-- <div id="updates"></div> -->
 

@@ -31,10 +31,10 @@ var flip = function() {
   });
 };
 
-
-  $('#change').on('click', function() {
-    $('#updates').append('#update_content')
-  });
+$('#updates').html('TESTING!!!');
+  // $('#add').on('click', function() {
+  //   $('#updates').append('#update_content.text()')
+  // });
 
 // function addContent(updates, content) {
 //   document.getElementById(updates).innerHTML = content;
