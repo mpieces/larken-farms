@@ -20,7 +20,7 @@
         <li><a href="/produce" <% if @page == 'p' %>class="selected" <% end %>>Our Produce</a></li>
         <li><a href="/gallery" <% if @page == 'g' %>class="selected" <% end %>>Gallery</a></li>
        <!--  STORE CATALOG: -->
-        <li><a href="/stores" <% if @page == 'o' %> class="selected" <% end %>>Ordering</a></li>
+        <!-- <li><a href="/stores" <% if @page == 'o' %> class="selected" <% end %>>Ordering</a></li> -->
         <li><a href="/location" <% if @page == 'l' %>class="selected" <% end %>>Location</a></li>
         <li><a href="/contacts" <% if @page == 'c' %>class="selected" <% end %>>Contact</a></li>
         <li><a href="/FAQs" <% if @page == 'f' %>class="selected" <% end %>>FAQ's</a></li>
@@ -48,12 +48,14 @@
 
     <%= yield %>
 
+    <footer>
+      <%= image_tag("grass-footer.jpg", :id => "grass-footer")%>
+    </footer>
   </div>
 
 
 
-  <footer>
-  </footer>
+
 
 </body>
 </html>

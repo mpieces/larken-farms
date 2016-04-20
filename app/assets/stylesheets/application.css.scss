@@ -107,11 +107,12 @@ body {
   height: auto !important;
   height: 100%;
   width: 1000px;
-  margin: 34px auto -140px;
+  margin: 10px auto -140px;
   background-color: white;
   padding: 20px;
   margin-bottom: -100px;
   position: relative;
+
 }
 
 #content:after {
@@ -119,14 +120,20 @@ body {
   display: block;
 }
 
-footer, .page-wrap:after {
-  height: 200px;
-}
+// footer, .page-wrap:after {
+//   // height: 200px;
+// }
 
-footer {
-  background: linear-gradient(to top, #4c9b5e, white);
+#grass-footer {
+  position: relative;
+  // margin-top: -100px; // negative value of footer height
+  height: 100px;
   width: 1000px;
   margin: 0 auto;
+  // clear: both;
+  // background: linear-gradient(to top, #4c9b5e, white);
+  // width: 1000px;
+  // margin: 0 auto;
 }
 
 /* HOME PAGE: ************************************ */
@@ -212,10 +219,10 @@ h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
 }
 
-// .title {
-//   margin-top: 25px;
-//   margin-left: 100px;
-// }
+.page-title {
+  margin-left: 50px;
+}
+
 
 // MAILING LIST BOX: #########################
 .mailing_list {
@@ -513,7 +520,7 @@ h1, h2, h3 {
 }
 
 
-/* ABOUT US PAGE */
+/* ABOUT US PAGE & PICK YOUR OWN */
 
 .aboutus {
   float: left;
@@ -523,6 +530,12 @@ h1, h2, h3 {
 .text {
   margin-left: 40px;
   margin-right: 40px;
+
+}
+
+.text li {
+  list-style-type: disc;
+  line-height: 30px;
 }
 
 /* LOCATION: ########################### */

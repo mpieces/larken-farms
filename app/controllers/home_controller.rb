@@ -10,8 +10,8 @@ class HomeController < ApplicationController
     @page = 'a'
   end
 
-  def peaches
-    @page_title = "Our Peaches"
+  def produce
+    @page_title = "Our Produce"
     @page = 'p'
   end
 
@@ -20,10 +20,10 @@ class HomeController < ApplicationController
     @page = 'g'
   end
 
-  def ordering
-    @page_title = "Ordering"
-    @page = 'o'
-  end
+  # def ordering
+  #   @page_title = "Ordering"
+  #   @page = 'o'
+  # end
 
   def location
     @page_title = "Location"
@@ -46,7 +46,5 @@ class HomeController < ApplicationController
   def pick
   end
 
-  # def facts
-  # end
 
 end
