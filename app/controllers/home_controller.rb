@@ -16,7 +16,7 @@ class HomeController < ApplicationController
   end
 
   def gallery
-    @page_title = "Gallery"
+    @page_title = "Photo Gallery"
     @page = 'g'
   end
 
@@ -45,6 +45,5 @@ class HomeController < ApplicationController
 
   def pick
   end
-
 
 end
