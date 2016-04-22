@@ -14,7 +14,7 @@ class UpdatesController < AuthenticatedController
     @update = Update.new(update_params)
     if @update.save
       flash[:success] = "Update added!"
-      redirect_to root_path
+      redirect_to root_path   # Redirects to home page where update should be displayed
     else
       render 'new'
     end

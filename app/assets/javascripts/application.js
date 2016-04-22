@@ -18,20 +18,20 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
-  flip();
-  // update();
-  // $('#updates').append($('.new-update');
-});
+// $(document).ready(function() {
+//   flip();
+//   // update();
+//   // $('#updates').append($('.new-update');
+// });
 
-var flip = function() {
-    var card = $('#card');
-    card.on ('click', function() {
-      card.toggleClass('flipped');
-  });
-};
+// var flip = function() {
+//     var card = $('#card');
+//     card.on ('click', function() {
+//       card.toggleClass('flipped');
+//   });
+// };
 
-$('#updates').html('TESTING!!!');
+// $('#updates').html('TESTING!!!');
   // $('#add').on('click', function() {
   //   $('#updates').append('#update_content.text()')
   // });

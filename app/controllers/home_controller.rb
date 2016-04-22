@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   def index
     @page_title = "Larken Farms Orchard"
     @page = 'h'
+    # render "updates/index"
   end
 
   def about

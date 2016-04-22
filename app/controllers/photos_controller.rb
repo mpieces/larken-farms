@@ -1,7 +1,7 @@
 class PhotosController < AuthenticatedController
 
   skip_before_action :authorize, only: :index
-  # Skip authorization, but can only view index
+  # Skip authorization, but users can only view index
 
 
   def index
