@@ -3,7 +3,8 @@ class HomeController < ApplicationController
   def index
     @page_title = "Larken Farms Orchard"
     @page = 'h'
-    # render "updates/index"
+    @updates = Update.all.order("created_at desc")
+    render "home/index"
   end
 
   def about
