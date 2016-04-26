@@ -125,10 +125,12 @@ body {
 // }
 
 #grass-footer {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   // margin-top: -100px; // negative value of footer height
   height: 100px;
-  width: 1000px;
   margin: 0 auto;
   // clear: both;
   // background: linear-gradient(to top, #4c9b5e, white);
