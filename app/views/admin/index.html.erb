@@ -1,5 +1,6 @@
-
-<h1>Welcome, <%=current_user.name %>!</h1>
-
-<p>It's <%= Time.now.to_s(:month_day_year) %>.</p>
+<div class="page-title">
+  <h2>Welcome, <%=current_user.name %>!</h2>
+  <br>
+  <h3>It's <%= Time.now.to_s(:month_day_year) %>.</h3>
+</div>
 <!-- <p>We have <%= pluralize(@total_orders, "order") %>.</p> -->

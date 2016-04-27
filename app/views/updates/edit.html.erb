@@ -1,14 +1,12 @@
-<h1>Add a new update</h1>
+<h1>Edit</h1>
 <br>
 
-<%= form_for @update do |f| %>
+<%= form_for(@update) do |f| %>
 
   <%= f.text_area :content, rows: 10, cols: 50, :placeholder => "update...."%>
-  <br>
+
   <%= f.submit 'Submit', id: "add" %>
 
 <% end %>
 
-
-
-
+<%= link_to 'Back', root_path %>

@@ -1,3 +1,5 @@
+
+
 <% if flash[:notice].present? %>
   <p id="notice"><%= flash[:notice] %></p>
 <% end %>
@@ -38,12 +40,21 @@
     <% @updates.each do |update| %>
       <div class="update">
         <div class="date">
-          <%= update.created_at.strftime("%A, %B %e, %Y") %>
+          <h4><b><%= update.created_at.strftime("%A, %B %e, %Y") %></b></h4>
         </div>
         <div class="content">
-          <%= update.content %>
+          <h4><%= update.content %></h4>
         </div>
+        <!-- Admin ability to edit/delete posts -->
+        <% if session[:user_id] %>
+
+            <%= link_to 'Edit', edit_update_path(update), :class => "actions" %>
+
+            <%= link_to 'Delete', update_path(update), method: :delete, data: {confirm: "You sure?" }, :class => "actions" %>
+
+        <% end %>
       </div>
+      <hr />
     <% end %>
   </div>
 
@@ -65,29 +76,17 @@
         <h3>*Subject to change based on weather conditions</h3>
         <h3>Please check site beforehand if coming to visit.</h3>
       </div>
-
-
     </div>
-    <div class="box3">
-    <a href="/PickYourOwn">
-      <div class="box">
-        <%= image_tag('peach-icon.png')%>
-        <p>Pick Your Own!</p>
-      </div>
-    </a>
-  </div>
-</div>
 
+    <div class="box3">
+      <a href="/PickYourOwn">
+        <div class="box">
+          <%= image_tag('peach-icon.png')%>
+          <p>Pick Your Own!</p>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
 
-<!-- <div id="updates"> -->
-  <!-- render "updates/index"  -->
-  <!-- <table>
-    <tbody>
-      <tr>
-        <td></td>
-      </tr>
-    </tbody>
-  </table> -->
-<!-- </div> -->
-<!-- <div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-post" data-href="https://www.facebook.com/permalink.php?story_fbid=986169711430622&amp;id=103050449742557" data-width="500"></div> -->
+

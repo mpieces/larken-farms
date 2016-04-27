@@ -1,14 +1,19 @@
-<h1>Photo Gallery</h1>
+<div class="page-title">
+  <h2>Photo Gallery</h2>
+</div>
+<hr />
 
 <!-- (can use partial here) -->
 <% @photos.each do |photo| %>
 
   <%= link_to image_tag(photo.image.url(:original), class: "media-object"), photo.image.url, target: '_blank' %>
   <h4 class="media-heading"><%= photo.title %></h4>
+ <!--  ADMIN: -->
   <% if session[:user_id] %>
     <%= link_to "Edit", edit_photo_path(photo) %>
     <%= link_to "Delete", photo_path(photo), method: :delete, data: {confirm: "You sure?" } %>
   <% end %>
+
 <% end %>
 
 <% if session[:user_id] %>

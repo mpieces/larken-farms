@@ -20,6 +20,10 @@ class UpdatesController < AuthenticatedController
     end
   end
 
+  def edit
+    @update = Update.find(params[:id])
+  end
+
   def update
     @update = Update.find(params[:id])
     if @update.update(update_params)
