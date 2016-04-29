@@ -3,8 +3,8 @@ class Photo < ActiveRecord::Base
   has_attached_file :image,
    styles: { thumb: ["64x64#", :jpg], original: ["400x400>", :jpg]},
    convert_options: { thumb: "-quality 75 -strip", original: "-quality 85 -strip" }
-   # storage: :s3,
-   # s3_credentials: {access_key_id: "AKIAIQ6D7DI64E63YICA", secret_access_key: "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"},
+   storage: :s3
+   # s3_credentials: {access_key_id: , secret_access_key: },
    # bucket: "larkenfarms",
    # :s3_permissions => :private,
    # :region => "us-west-2",
