@@ -5,7 +5,7 @@
 
 <!-- (can use partial here) (render @photos) -->
 <% @photos.each do |photo| %>
-<div class="img">
+<!-- <div class="img"> -->
   <%= link_to image_tag(photo.image.url(:medium), class: "photo"), photo.image.url, target: '_blank' %>
    <!-- photo.image.url(:original), rel: "lightbox[imagesetname]"  -->
   <h4 class="desc"><%= photo.title %></h4>
@@ -14,7 +14,7 @@
     <%= link_to "Edit", edit_photo_path(photo) %>
     <%= link_to "Delete", photo_path(photo), method: :delete, data: {confirm: "You sure?" } %>
   <% end %>
-</div>
+<!-- </div> -->
 <% end %>
 
 <% if session[:user_id] %>
