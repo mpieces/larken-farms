@@ -4,9 +4,13 @@ class Photo < ActiveRecord::Base
    styles: { thumb: ["64x64#", :jpg], original: ["400x400>", :jpg]},
    convert_options: { thumb: "-quality 75 -strip", original: "-quality 85 -strip" },
    storage: :s3,
-   s3_credentials: {access_key_id: ENV["AWS_KEY"] , secret_access_key: ENV["AWS_SECRET"] },
-   bucket: "larkenfarms",
-   :s3_permissions => :private
+   s3_credentials: {
+    bucket: ENV['S3_BUCKET_NAME'],
+    access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+    secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"]
+  }
+
+   # :s3_permissions => :private
    # :region => "us-west-2",
    # :endpoint => "larkenfarms.s3.amazonaws.com"
 
