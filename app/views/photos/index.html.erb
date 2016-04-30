@@ -3,6 +3,10 @@
 </div>
 <hr />
 
+<% if session[:user_id] %>
+  <%= link_to "Upload Photo", new_photo_path %>
+<% end %>
+
 <!-- (can use partial here) (render @photos) -->
 <% @photos.each do |photo| %>
 <!-- <div class="img"> -->
@@ -17,6 +21,3 @@
 <!-- </div> -->
 <% end %>
 
-<% if session[:user_id] %>
-  <%= link_to "Upload Photo", new_photo_path %>
-<% end %>
