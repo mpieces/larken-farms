@@ -38,7 +38,9 @@
             <li><%= link_to 'Update Photos', photos_path %></li>
             <li><%= link_to 'Add an Update', new_update_path %></li>
            <!--  <li><%= link_to 'Orders', orders_path %></li> -->
-            <li><%= link_to 'Products', products_path %></li>
+           <!--  <li><%= link_to 'Products', products_path %></li> -->
+            <li><%= link_to 'In Season Now', products_path %></li>
+
             <li><%= link_to 'Subscribers', subscribers_path %></li>
             <li><%= link_to 'Admins', users_path %></li>
           </ul>
@@ -47,8 +49,8 @@
     <% end %>
 
     <%= yield %>
-<!--
-    <%= image_tag("grass-footer.jpg", :id => "grass-footer")%> -->
+
+    <%= image_tag("grass-footer.jpg", :id => "grass-footer")%>
 
   </div>
 

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/location' => 'home#location'
   get '/contacts' => 'contacts#new'
   get '/FAQs' => 'home#FAQs'
-  get '/InSeasonNow' => 'home#season'
+  get '/InSeasonNow' => 'store#index'
   get '/PickYourOwn' => 'home#pick'
 
 
