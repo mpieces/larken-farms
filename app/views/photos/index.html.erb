@@ -6,7 +6,7 @@
 <!-- (can use partial here) (render @photos) -->
 <% @photos.each do |photo| %>
 <div class="img">
-  <%= link_to image_tag(photo.image.url(:medium), class: "photo") %>
+  <%= link_to image_tag(photo.image.url(:medium), class: "photo"), photo.image.url, target: '_blank' %>
    <!-- photo.image.url(:original), rel: "lightbox[imagesetname]"  -->
   <h4 class="desc"><%= photo.title %></h4>
  <!--  ADMIN: -->
