@@ -7,12 +7,15 @@
   <%= link_to "Upload Photo", new_photo_path %>
 <% end %>
 
-<!-- (can use partial here) (render @photos) -->
+
 <% @photos.each do |photo| %>
-<!-- <div class="img"> -->
-  <%= link_to image_tag(photo.image.url(:original), class: "photo"), photo.image.url, target: '_blank' %>
+  <div class="photo">
+    <%= link_to image_tag(photo.image.url(:original), class: "photo"), photo.image.url, target: '_blank' %>
+  </div>
    <!-- photo.image.url(:original), rel: "lightbox[imagesetname]"  -->
-  <h4 class="desc"><%= photo.title %></h4>
+  <div class="desc">
+    <h4><%= photo.title %></h4>
+  </div>
  <!--  ADMIN: -->
   <% if session[:user_id] %>
     <%= link_to "Edit", edit_photo_path(photo) %>
