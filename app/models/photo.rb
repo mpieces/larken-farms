@@ -1,14 +1,18 @@
 class Photo < ActiveRecord::Base
-
-  has_attached_file :image,
-   styles: { thumb: ["64x64#", :jpg], original: ["400x400>", :jpg]},
-   convert_options: { thumb: "-quality 75 -strip", original: "-quality 85 -strip" },
-   storage: :s3,
-   s3_credentials: {
-    bucket: ENV['S3_BUCKET_NAME'],
-    access_key_id: ENV["AWS_ACCESS_KEY_ID"],
-    secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"]
-  }
+  if Rails.env.production?
+    has_attached_file :image,
+     styles: { thumb: ["64x64#", :jpg], original: ["400x400>", :jpg]},
+     convert_options: { thumb: "-quality 75 -strip", original: "-quality 85 -strip" },
+     storage: :s3,
+     s3_credentials: {
+      bucket: ENV['S3_BUCKET_NAME'],
+      access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+      secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"]
+    }
+  else
+    has_attached_file :image, :styles => { thumb: ["64x64#", :jpg], original: ["400x400>", :jpg]},
+                    :storage => :filesystem
+  end
    # s3_host_name: "s3-us-west-2.amazonaws.com",
    # s3_protocol: "https"
 
