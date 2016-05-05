@@ -36,8 +36,8 @@ class HomeController < ApplicationController
     @page = 'c'
   end
 
-  def FAQs
-    @page_title = "FAQs"
+  def faqs
+    @page_title = "faqs"
     @page = 'f'
   end
 

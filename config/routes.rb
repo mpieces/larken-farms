@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # get '/ordering' => 'home#ordering' see below store#index
   get '/location' => 'home#location'
   get '/contacts' => 'contacts#new'
-  get '/FAQs' => 'home#FAQs'
+  get '/faqs' => 'home#faqs'
   get '/InSeasonNow' => 'store#index'
   get '/PickYourOwn' => 'home#pick'
 
