@@ -9,6 +9,7 @@ class HomeController < ApplicationController
   def about
     @page_title = "About Us"
     @page = 'a'
+    # @abouts = About.find(params[:id])
   end
 
   def produce

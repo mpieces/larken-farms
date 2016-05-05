@@ -1,0 +1,11 @@
+<h1>Edit</h1>
+<br>
+
+<%= form_for(@about) do |f| %>
+  <%= f.text_area :content %>
+
+  <%= f.submit 'Submit' %>
+
+<% end %>
+
+<%= link_to 'Back', about_path %>
