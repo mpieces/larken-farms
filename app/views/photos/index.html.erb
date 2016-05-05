@@ -4,23 +4,29 @@
 <hr />
 
 <% if session[:user_id] %>
-  <%= link_to "Upload Photo", new_photo_path %>
+  <%= link_to "Upload Photo", new_photo_path, class: "button-g" %>
 <% end %>
 
-
-<% @photos.each do |photo| %>
-  <div class="photo">
-    <%= link_to image_tag(photo.image.url(:original), class: "photo"), photo.image.url, target: '_blank' %>
-  </div>
-   <!-- photo.image.url(:original), rel: "lightbox[imagesetname]"  -->
-  <div class="desc">
-    <h4><%= photo.title %></h4>
-  </div>
- <!--  ADMIN: -->
-  <% if session[:user_id] %>
-    <%= link_to "Edit", edit_photo_path(photo) %>
-    <%= link_to "Delete", photo_path(photo), method: :delete, data: {confirm: "You sure?" } %>
+<div class="wrap">
+  <% @photos.each do |photo| %>
+    <div class="photoOuter">
+      <div class="photoInner">
+        <%= link_to image_tag(photo.image.url(:original)) %>
+     <!-- photo.image.url(:original), rel: "lightbox[imagesetname]"  -->
+        <div class="titleBox">
+          <h4><%= photo.title %></h4>
+          <!--  ADMIN: -->
+          <% if session[:user_id] %>
+            <%= link_to "Edit", edit_photo_path(photo), class: "button-o" %>
+            <%= link_to "Delete", photo_path(photo), class: "button-r", method: :delete, data: {confirm: "You sure?" } %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   <% end %>
-<!-- </div> -->
-<% end %>
+</div>
+
+
+
+
 

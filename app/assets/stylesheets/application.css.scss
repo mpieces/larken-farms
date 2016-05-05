@@ -90,6 +90,46 @@ body {
   background-color: #57320f;
 }
 // ################################################
+// Green button:
+.button-g {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+// Orange button:
+.button-o {
+    background-color: #dd8938; /* orange */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+// Red Button:
+.button-r {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
 
 #notice {
   color: #000 !important;
@@ -112,7 +152,6 @@ body {
   padding: 20px;
   margin-bottom: -100px;
   position: relative;
-
 }
 
 #content:after {
@@ -668,26 +707,4 @@ label {
 }
 
 // IMAGE GALLERY
-div.img {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
 
-div.img img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-
-// .fb-post {
-//   position: absolute;
-//   top: 200px;
-//   margin: 0 auto;
-// }
