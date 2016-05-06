@@ -112,7 +112,7 @@ body {
     background-color: #dd8938; /* orange */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -125,7 +125,7 @@ body {
     background-color: red;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -669,46 +669,46 @@ label {
 
 // CARDS
 
-.holder {
-  width: 200px;
-  height: 260px;
-  position: relative;
-  perspective: 800px;
-}
+// .holder {
+//   width: 200px;
+//   height: 260px;
+//   position: relative;
+//   perspective: 800px;
+// }
 
-#card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-}
+// #card {
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   transform-style: preserve-3d;
+//   transition: transform 1s;
+// }
 
-#card figure {
-  margin: 0;
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border: 2px solid black;
-}
+// #card figure {
+//   margin: 0;
+//   display: block;
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   backface-visibility: hidden;
+//   border: 2px solid black;
+// }
 
-#card .front {
-  // background: image-url('redskin.jpeg');
-  text-align: center;
-}
+// #card .front {
+//   // background: image-url('redskin.jpeg');
+//   text-align: center;
+// }
 
-#card .back {
-  background: green;
-  color: white;
-  text-align: center;
-  transform: rotateY( 180deg );
-}
+// #card .back {
+//   background: green;
+//   color: white;
+//   text-align: center;
+//   transform: rotateY( 180deg );
+// }
 
-#card.flipped {
-  transform: rotateY( 180deg );
-}
+// #card.flipped {
+//   transform: rotateY( 180deg );
+// }
 
 // IMAGE GALLERY
 
@@ -722,6 +722,7 @@ label {
    position: relative;
    width: 20%;
    padding-bottom: 20%;
+
 }
 
 .photoInner {
@@ -731,9 +732,11 @@ label {
    top: 10px;
    bottom: 10px;
    overflow: hidden;
+   border: 4px solid #7C3328;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
 }
 
-.photoInner photo {
+.photoInner .photo {
   width: 100%;
 }
 
@@ -756,9 +759,8 @@ label {
 
 .admin-links {
    position: absolute;
-   bottom: 0;
-   left: 0;
-   right: 0;
+   bottom: 50;
+   // positioned absolutely relative to .photoOuter
 }
 
 body.no-touch .photoInner:hover .titleBox, body.touch .photoInner.touchFocus .titleBox {

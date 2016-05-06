@@ -15,17 +15,17 @@
      <!-- photo.image.url(:original), rel: "lightbox[imagesetname]"  -->
         <div class="titleBox">
           <h4><%= photo.title %></h4>
-
         </div>
       </div>
+        <!--  ADMIN: -->
+        <div class="admin-links">
+          <% if session[:user_id] %>
+            <%= link_to "Edit", edit_photo_path(photo), class: "button-o" %>
+            <%= link_to "Delete", photo_path(photo), class: "button-r", method: :delete, data: {confirm: "You sure?" } %>
+          <% end %>
+        </div>
     </div>
-    <!--  ADMIN: -->
-    <div class="admin-links">
-      <% if session[:user_id] %>
-        <%= link_to "Edit", edit_photo_path(photo), class: "button-o" %>
-        <%= link_to "Delete", photo_path(photo), class: "button-r", method: :delete, data: {confirm: "You sure?" } %>
-      <% end %>
-    </div>
+
   <% end %>
 </div>
 
