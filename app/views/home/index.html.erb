@@ -48,9 +48,9 @@
         <!-- Admin ability to edit/delete posts -->
         <% if session[:user_id] %>
 
-            <%= link_to 'Edit', edit_update_path(update), :class => "actions" %>
+            <%= link_to 'Edit', edit_update_path(update), :class => "button-o" %>
 
-            <%= link_to 'Delete', update_path(update), method: :delete, data: {confirm: "You sure?" }, :class => "actions" %>
+            <%= link_to 'Delete', update_path(update), method: :delete, data: {confirm: "You sure?" }, :class => "button-r" %>
 
         <% end %>
       </div>
@@ -70,6 +70,8 @@
 
     <div class="box2">
       <div class="box">
+
+
         <h2>Our Hours: </h2>
         <h3>Monday-Friday</h3>
         <h3>9am-5pm*</h3>

@@ -1,9 +1,9 @@
 <h1>Upload Photo</h1>
-
+<br>
 <%= form_for @photo do |f| %>
   <!-- (render error messages) -->
   <div class="photo-caption">
-    <p>Caption</p>
+    <h3>Caption</h3>
     <%= f.text_area :title, rows: 10, cols: 50 %>
   </div>
 
@@ -12,7 +12,7 @@
     <%= f.file_field :image %>
   </div>
 
-  <%= f.submit 'Upload' %>
+  <%= f.submit 'Upload', class: "button-g" %>
 
 <% end %>
 
