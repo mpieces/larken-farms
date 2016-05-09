@@ -1,0 +1,14 @@
+<h1>Edit Hours</h1>
+<br>
+
+<%= form_for(@hours) do |f| %>
+
+  <%= f.text_area :content %>
+
+  <br>
+
+  <%= f.submit 'Submit', class: "button-g" %>
+
+<% end %>
+
+<%= link_to 'Back', root_path %>

@@ -70,15 +70,28 @@
 
     <div class="box2">
       <div class="box">
+        <h3>Our Current Hours:</h3>
 
+          <div class="hours-content">
+            <h2><%= @hours.content %></h2>
+            <h4>*Subject to change based on weather conditions</h4>
+          </div>
 
-        <h2>Our Hours: </h2>
+        <!-- Admin ability to EDIT hours -->
+        <% if session[:user_id] %>
+            <%= link_to 'Edit', edit_hour_path(@hours), :class => "button-o", id: "button-o" %>
+        <% end %>
+
+        <!-- <h2>Our Hours: </h2>
         <h3>Monday-Friday</h3>
         <h3>9am-5pm*</h3>
-        <h3>*Subject to change based on weather conditions</h3>
-        <h3>Please check site beforehand if coming to visit.</h3>
+        <h3>*Subject to change based on weather conditions</h3> -->
+        <!-- <h3>Please check site beforehand if coming to visit.</h3> -->
+        </div>
       </div>
-    </div>
+
+
+
 
     <div class="box3">
       <a href="/PickYourOwn">

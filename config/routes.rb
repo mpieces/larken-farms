@@ -25,9 +25,6 @@ Rails.application.routes.draw do
       delete 'logout' => :destroy
     end
 
-  # get 'sessions/create'
-  # get 'sessions/destroy'
-
   resources :users
   resources :orders
   resources :line_items
@@ -48,6 +45,7 @@ Rails.application.routes.draw do
   resources :photos
   resources :updates
   resources :abouts
+  resources :hours
 
 end
 
