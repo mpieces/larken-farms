@@ -20,14 +20,14 @@
     <%= f.text_area :description, rows: 10 %>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
   </div>
  <!--  <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div> -->
   <!-- <div class="actions"> -->
-    <%= f.submit %>
+    <%= f.submit 'Upload' %>
  <!--  </div> -->
 <% end %>

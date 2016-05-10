@@ -31,24 +31,7 @@
 //   });
 // };
 
-// $('#updates').html('TESTING!!!');
-  // $('#add').on('click', function() {
-  //   $('#updates').append('#update_content.text()')
-  // });
 
-// function addContent(updates, content) {
-//   document.getElementById(updates).innerHTML = content;
-// };
-
-// var update = function() {
-//   $('#updates').replaceWith('td.new-update').html();
-// };
-
-// var update = function() {
-//   var $updates = $('<div id="updates">');
-//   var $newUpdate = $('<td class="new-update">update</td>');
-//   $updates.prepend($newUpdate);
-// };
 
 
 
