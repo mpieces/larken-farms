@@ -20,7 +20,7 @@
       <% @products.each do |product| %>
         <% cache ['entry', product] do %>
           <div class="entry">
-            <%= image_tag(product.image_url) %>
+            <%= image_tag(product.image) %>
             <h3><%= product.title %></h3>
             <h5><%= product.description %></h5>
 
