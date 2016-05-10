@@ -10,7 +10,7 @@ class HomeController < ApplicationController
   def about
     @page_title = "About Us"
     @page = 'a'
-    @about = About.all
+    @about = About.last
   end
 
   def produce
@@ -41,12 +41,6 @@ class HomeController < ApplicationController
   def faqs
     @page_title = "FAQs"
     @page = 'f'
-  end
-
-  def season
-  end
-
-  def pick
   end
 
 end
