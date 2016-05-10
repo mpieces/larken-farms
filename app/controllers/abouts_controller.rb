@@ -1,7 +1,11 @@
-class AboutController < AuthenticatedController
+class AboutsController < AuthenticatedController
 
   skip_before_action :authorize, only: :show
 
+
+  def index
+    @about = About.all
+  end
 
   def new
     @about = About.new
