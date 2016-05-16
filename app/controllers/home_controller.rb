@@ -10,7 +10,7 @@ class HomeController < ApplicationController
   def about
     @page_title = "About Us"
     @page = 'a'
-    @about = About.last
+    # @about = About.last
   end
 
   def produce
