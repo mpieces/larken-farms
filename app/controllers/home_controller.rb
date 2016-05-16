@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     @page_title = "Larken Farms Orchard"
     @page = 'h'
     @updates = Update.all.order("created_at desc")
-    @hours = Hour.last
+    @hours = Hour.all
   end
 
   def about
