@@ -11,20 +11,20 @@ User.delete_all
 # Products
 Product.create!(
   title: 'Peaches',
-  description: "1 lb. of juicy Whiteflesh peaches",
-  image_url: 'peach-icon.png'
+  description: "1 lb. of juicy Whiteflesh peaches"
+  # image: 'peach-icon.png'
 
 )
 Product.create!(
   title: 'blackberries',
-  description: "I am a description",
-  image_url: 'bb-icon.png'
+  description: "I am a description"
+  # image: 'bb-icon.png'
 )
 
 Product.create!(
   title: 'Cherries',
-  description: "I am a cherry description",
-  image_url: 'cherries.jpg'
+  description: "I am a cherry description"
+  # image: 'cherries.jpg'
   )
 
 # Users

@@ -73,7 +73,9 @@
         <h3>Our Current Hours:</h3>
 
           <div class="hours-content">
-            <h2><%= @hours.last.content %></h2>
+            <% @hours.each do |hour| %>
+            <h2><%= hour.content %></h2>
+            <% end %>
             <h4>*Subject to change based on weather conditions</h4>
           </div>
 
