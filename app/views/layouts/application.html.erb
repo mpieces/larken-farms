@@ -35,15 +35,20 @@
           <!-- <div id="cart"> -->
           <!-- </div> -->
           <ul>
+            <li><%= link_to 'Admin Home', admin_path %></li>
+
             <li><%= link_to 'Update Photos', photos_path %></li>
+
             <li><%= link_to 'Add an Update', new_update_path %></li>
+
            <!--  <li><%= link_to 'Orders', orders_path %></li> -->
            <!--  <li><%= link_to 'Products', products_path %></li> -->
             <li><%= link_to 'Update Hours', new_hour_path %></li>
-           <!--  <li><%= link_to 'Update About Us', new_about_path %></li> -->
+
             <li><%= link_to 'In Season Now', products_path %></li>
 
             <li><%= link_to 'Subscribers', subscribers_path %></li>
+
             <li><%= link_to 'Admins', users_path %></li>
           </ul>
           <%= button_to 'Logout', logout_path, method: :delete %>

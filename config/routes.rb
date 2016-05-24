@@ -44,7 +44,6 @@ Rails.application.routes.draw do
   # , only [:new, :create]
   resources :photos
   resources :updates
-  resources :abouts
   resources :hours
 
 end
