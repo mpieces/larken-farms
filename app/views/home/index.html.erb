@@ -71,17 +71,14 @@
     <div class="box2">
       <div class="box">
         <h3>Our Current Hours:</h3>
-
           <div class="hours-content">
-            <% @hours.each do |hour| %>
-            <h2><%= hour.content %></h2>
-            <% end %>
+            <h4><%= @hours.content %></h4>
             <h4>*Subject to change based on weather conditions</h4>
           </div>
 
         <!-- Admin ability to EDIT hours -->
         <% if session[:user_id] %>
-            <%= link_to 'Edit', edit_hour_path(@hours), :class => "button-o", id: "button-o" %>
+            <%= link_to 'Edit', new_hour_path, :class => "button-o", id: "button-o" %>
         <% end %>
 
         <!-- <h2>Our Hours: </h2>

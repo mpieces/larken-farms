@@ -1,12 +1,19 @@
 <h1>Update Hours</h1>
 <br>
 
-<%= form_for @hours do |f| %>
+<% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+<% end %>
+
+<%= form_for @hours, url: {action: "create"} do |f| %>
 
   <%= f.text_area :content, :rows => 5, :cols => 30, :placeholder => "EX: Monday - Friday 10 am - 5 pm" %>
 
   <br>
 
-  <%= f.submit 'Submit', class: "button-g" %>
+  <%= f.submit 'Update', class: "button-g" %>
 
 <% end %>
+
+
+

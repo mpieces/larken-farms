@@ -1,9 +1,13 @@
 <h1>Edit Hours</h1>
 <br>
 
+<% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+  <% end %>
+
 <%= form_for(@hours) do |f| %>
 
-  <%= f.text_area :content %>
+  <%= f.text_area :content, :rows => 5, :cols => 30, :placeholder => "EX: Monday - Friday 10 am - 5 pm" %>
 
   <br>
 

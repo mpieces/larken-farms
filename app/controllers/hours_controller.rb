@@ -34,6 +34,12 @@ class HoursController < AuthenticatedController
     end
   end
 
+   def destroy
+    Hour.find(params[:id]).destroy
+    flash[:success] = "Hours deleted"
+    redirect_to root_path
+  end
+
 
   private
 

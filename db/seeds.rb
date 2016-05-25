@@ -2,7 +2,7 @@
 
 Product.delete_all
 User.delete_all
-# Hour.delete_all
+Hour.delete_all
 # Cart.delete_all
 # LineItem.delete_all
 # Contact.delete_all
