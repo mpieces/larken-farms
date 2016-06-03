@@ -40,7 +40,7 @@
     <% @updates.each do |update| %>
       <div class="update">
         <div class="date">
-          <h4><b><%= update.created_at.strftime("%A, %B %e, %Y") %></b></h4>
+          <h4><%= update.created_at.getlocal.strftime("%A, %B %e, %Y") %>: </h4>
         </div>
         <div class="content">
           <h4><%= update.content %></h4>
