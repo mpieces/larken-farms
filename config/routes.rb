@@ -26,9 +26,9 @@ Rails.application.routes.draw do
     end
 
   resources :users
-  resources :orders
-  resources :line_items
-  resources :carts
+  # resources :orders
+  # resources :line_items
+  # resources :carts
 
   resources :stores, controller: :store, only: :index
 

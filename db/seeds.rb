@@ -1,12 +1,9 @@
 # raise "Only run this locally" unless Rails.env.development?
 
-Product.delete_all
+
 User.delete_all
-Hour.delete_all
-# Cart.delete_all
-# LineItem.delete_all
-# Contact.delete_all
-# Order.delete_all
+
+
 
 # Products
 # Product.create!(
