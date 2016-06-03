@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  # before_action :set_product, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authorize, only: :index
+  # Skip authorization, but users can only view index page
 
   # GET /products
   # GET /products.json
@@ -80,9 +82,9 @@ class ProductsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
+    # def set_product
+    #   @product = Product.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
