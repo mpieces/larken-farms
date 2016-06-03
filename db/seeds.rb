@@ -9,23 +9,23 @@ Hour.delete_all
 # Order.delete_all
 
 # Products
-Product.create!(
-  title: 'Peaches',
-  description: "1 lb. of juicy Whiteflesh peaches"
-  # image: 'peach-icon.png'
+# Product.create!(
+#   title: 'Peaches',
+#   description: "1 lb. of juicy Whiteflesh peaches"
 
-)
-Product.create!(
-  title: 'blackberries',
-  description: "I am a description"
-  # image: 'bb-icon.png'
-)
 
-Product.create!(
-  title: 'Cherries',
-  description: "I am a cherry description"
-  # image: 'cherries.jpg'
-  )
+# )
+# Product.create!(
+#   title: 'blackberries',
+#   description: "I am a description"
+
+# )
+
+# Product.create!(
+#   title: 'Cherries',
+#   description: "I am a cherry description"
+
+#   )
 
 # Users
 User.create!(
