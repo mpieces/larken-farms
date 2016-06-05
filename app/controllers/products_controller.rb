@@ -7,67 +7,76 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-    @content_id = true
+    # @content_id = true
   end
 
   # GET /products/1
   # GET /products/1.json
-  def show
-  end
+  # def show
+  # end
 
   # GET /products/new
   def new
     @product = Product.new
-    @content_id = true
-
   end
 
   # GET /products/1/edit
   def edit
-    @content_id = true
+    @product = Product.find(params[:id])
   end
 
   # POST /products
   # POST /products.json
   def create
-    @content_id = true
     @product = Product.new(product_params)
-
-    respond_to do |format|
-      if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
-      else
-        format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+    if @product.save
+      flash[:success] = "Product saved"
+      redirect_to products_path
+    else
+      render 'new'
     end
+    # respond_to do |format|
+    #   if @product.save
+    #     format.html { redirect_to @product, notice: 'Product was successfully created.' }
+    #     format.json { render :show, status: :created, location: @product }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @product.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
-    @content_id = true
-    respond_to do |format|
-      if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
-        format.json { render :show, status: :ok, location: @product }
-      else
-        format.html { render :edit }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      flash[:success] = "Product updated"
+      redirect_to products_path
+    else
+      render 'edit'
     end
+    # respond_to do |format|
+    #   if @product.update(product_params)
+    #     format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+    #     format.json { render :show, status: :ok, location: @product }
+    #   else
+    #     format.html { render :edit }
+    #     format.json { render json: @product.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
-    @content_id = true
-    @product.destroy
-    respond_to do |format|
-      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    Product.find(params[:id]).destroy
+    flash[:success] = "Product deleted"
+    redirect_to products_path
+    # respond_to do |format|
+    #   format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
+    #   format.json { head :no_content }
+    # end
   end
 
   # def who_bought
