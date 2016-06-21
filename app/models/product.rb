@@ -25,7 +25,7 @@ class Product < ActiveRecord::Base
   end
 
 
-  validates_attachment
+  validates_attachment :image,
    content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] },
    size: { in: 0..500.kilobytes }
 
