@@ -18,6 +18,14 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).ready(function() {
+  $("img").error(function() {
+  $(this).hide();
+  });
+});
+
+// CODE FOR ORIGINAL CARD FLIP FUNCTIONALITY
+
 // $(document).ready(function() {
 //   flip();
 //   // update();
@@ -30,7 +38,6 @@
 //       card.toggleClass('flipped');
 //   });
 // };
-
 
 
 
