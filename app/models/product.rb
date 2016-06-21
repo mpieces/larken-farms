@@ -1,8 +1,10 @@
 class Product < ActiveRecord::Base
 
-  validates :title, :description, presence: true
+  validates :title, presence: true
   # validates :price, numericality: {greater_than_or_equal_to: 0.01}
-  validates :title, uniqueness: true
+  # validates :title, uniqueness: true
+
+  # has_many :line_items, dependent: :destroy
 
   def self.latest
     Product.order(:updated_at).last
@@ -23,9 +25,11 @@ class Product < ActiveRecord::Base
   end
 
 
-  validates_attachment :image, presence: true,
+  validates_attachment
    content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] },
    size: { in: 0..500.kilobytes }
 
+
+   # :image, presence: true
 
 end

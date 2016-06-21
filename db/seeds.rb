@@ -27,7 +27,7 @@ User.delete_all
 # Users
 User.create!(
   name: "Ken",
-  password: "test",
+  password: "password",
   admin: true
 )
 
