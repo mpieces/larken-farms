@@ -17,7 +17,35 @@
     <h3><span class="underline">Subscribers:</span> view list of subscribers' emails</h3>
     <br>
     <h3><span class="underline">Admins:</span> update, edit, delete list of users with admin access</h3>
+
   </div>
+
+
+
+     <% if session[:user_id] %>
+        <div id="admin-content">
+          <!-- <div id="cart"> -->
+          <!-- </div> -->
+          <ul>
+            <li><%= link_to 'Admin Home', admin_path %></li>
+
+            <li><%= link_to 'Update Photos', photos_path %></li>
+
+            <li><%= link_to 'Add an Update', new_update_path %></li>
+
+
+            <li><%= link_to 'Update Hours', new_hour_path %></li>
+
+            <li><%= link_to 'In Season Now', products_path %></li>
+
+            <li><%= link_to 'Subscribers', subscribers_path %></li>
+
+            <li><%= link_to 'Admins', users_path %></li>
+          </ul>
+          <%= button_to 'Logout', logout_path, method: :delete %>
+        </div>
+    <% end %>
+
 
 </div>
 
